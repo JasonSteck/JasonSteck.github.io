@@ -1,0 +1,34 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title> Guestbook </title>
+  <meta name="description" content="An example application using a WS Nexus server">
+  <link rel="stylesheet" href="main.css">
+</head>
+
+<body>
+  <h1> Guestbook </h1>
+  <div class="input-container">
+    <input class="input-container__input" id="server" value='ws://127.0.0.1:3000' autofocus />
+    <button class="input-container__button" id="connect"> Connect </button>
+  </div>
+  <div id="content" style="display:none">
+    <ul id="name-list"></ul>
+    <div class="input-container">
+      <input class="input-container__input" id="name-input" placeholder="Name" />
+      <button class="input-container__button" id="add"> Add </button>
+    </div>
+  </div>
+  <div id="status-container">
+    Status: <span id="status"> No server connection </span>
+  </div>
+  <div id="watcher-container" style="display:none">
+    Clients Connected: <span id="watchers"></span>
+  </div>
+
+  <script src="../ws-nexus-user.js"></script>
+  <script src="./Guestbook.js"></script>
+  <script src="./ui.js"></script>
+</body>
+</html>
